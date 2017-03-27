@@ -11,8 +11,7 @@ RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.zip &
 RUN google-cloud-sdk/install.sh --usage-reporting=true --path-update=true --bash-completion=true --rc-path=/.bashrc
 
 COPY . /db_utils
-COPY backup_3d /etc/cron.d/backup_3d
-RUN crontab /etc/cron.d/backup_3d
+COPY backup.sh /etc/cron.hourly/backup.sh
 
 # Finalize
 RUN mkdir /.ssh
