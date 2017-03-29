@@ -2,9 +2,9 @@
 
 This is a docker image based on mongo:latest with google-cloud-sdk installed. It's a utility image to perform mongoDB backup/restore within google cloud platform
 ---
-To authenticate with google cloud you need to load your service account cert file and issue login.sh with file name (default is /key/gcloud-storage-key.json)
+To authenticate with google cloud you need to load your service account cert file and issue `gcloud auth` with file name (default is /key/gcloud-storage-key.json)
 ```shell
-/db_utils/login.sh /PATH/TO/CERT_FILE
+gcloud auth activate-service-account --key-file /PATH/TO/KEY_FILE
 ```
 
 Then you can perform your backup/restore tasks.
