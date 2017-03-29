@@ -16,4 +16,4 @@ COPY . /db_utils
 RUN mkdir /.ssh
 ENV PATH $PATH:/google-cloud-sdk/bin  
 
-CMD start.sh
+CMD /db_utils/start.sh
