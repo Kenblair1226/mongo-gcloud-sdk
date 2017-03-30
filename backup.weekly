@@ -1,2 +1,2 @@
-0 20 * * 1 /db_utils/backup.sh >> /var/log/cron.log 2>&1
+0 20 * * 1 . /db_utils/env.sh; /db_utils/backup.sh >> /var/log/cron.log 2>&1
 
