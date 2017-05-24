@@ -10,3 +10,4 @@ then crontab -u root /db_utils/backup.weekly
      cron -f
 fi
 
+/db_utils/login.sh
